@@ -147,7 +147,7 @@ This type of issue is much more flexible as it can be about a wide variety of ca
 #### When I shouldn't open an issue
 
 * I'm having trouble using a user-end feature and ask for help.
-* Reason 2
+* I'm trying to contact the community's moderators or admins.
 
 If any of these criterias meet your case, or if you're not sure if you should open an issue or not, head over [our Discord](#join-the-discussion-on-discord) and explain to us the problem precisely. We will dig it up and try to help you. If needed, we could ask you to open an issue.
 
