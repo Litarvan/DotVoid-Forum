@@ -11,8 +11,8 @@ Developing a forum ourselves allows to involve the community, energize it and br
 ## Requirements
 
 * Git (of course)
-* PHP >= 7.1
-* Mysql server >= 8.0
+* PHP >= 7.2
+* MariaDB server >= 8.0
 * Apache 2
 * Composer
 * Supervisor
