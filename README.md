@@ -34,19 +34,19 @@ The provision should have installed and configured everything you need to start 
 
 **Mysql root credentials:**
 
-Username: root
-Password: root
-Database name: dotvoid
-Testing database name: dotvoid_test
+Username: root  
+Password: root  
+Database name: dotvoid  
+Testing database name: dotvoid_test  
 
 **Mysql laravel credentials:**
 
-Username: laravel
+Username: laravel  
 Password: secret
 
 **Virtual Machine credentials:**
 
-Username: vagrant
+Username: vagrant  
 Password: vagrant
 
 **Default admin account:**
@@ -90,7 +90,7 @@ To run the automated tests, simply run : `php ./vendor/phpunit/phpunit/phpunit` 
 
 ## Contributing
 
-Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
 
