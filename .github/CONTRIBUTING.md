@@ -31,7 +31,7 @@ You can find our technical documentation [here](). If anything feels wrong, outd
 
 ### Writing documentation
 
-We are generating our documentation using [PHPDoc](https://www.phpdoc.org/).
+We generate our documentation using [PHPDoc](https://www.phpdoc.org/).
 
 Here is an example of a valid documentation block from the [Laravel contribution guide](https://laravel.com/docs/5.6/contributions).
 
@@ -52,7 +52,7 @@ public function bind($abstract, $concrete = null, $shared = false)
 
 ## Issues
 
-This section will guide you through the process of reporting a bug, asking for support. Please understand that we need as much information as possible in your reports to be able to correctly address it. Be precise, describe the problem, the context, how it happened, and if possible why it happened.
+This section will guide you through the process of reporting a bug and asking for support. Please understand that we need as much information as possible in your report to be able to correctly address it. Be precise, describe the problem, the context, how it happened, and if possible why it happened.
 
 ### Before submitting an issue
 
@@ -94,7 +94,7 @@ For example: `Click the "Create" button on the top right of the screen -> Fill t
 * If possible, **include screenshots and/or the relevant code**.
 * **Include the request status** provided by your browser in the "Network" tab in the developer tools. They give a lot of information such as the request's parameters, the response, status code, etc (It will be relevant most of the time)
 * **Check your logs**. The PHP ones (`/var/log/apache2/error.log`) and the Laravel ones in the `storage/logs` folder. If they contain anything related to your issue, please include them in your report.
-* **Check if you can reproduce the bug**. If yes, provide a detailled guideline to reproduce, just like your step-by-step description.
+* **Check if you can reproduce the bug**. If yes, provide a detailed guideline to reproduce, just like your step-by-step description.
 * **Include the branch and the commit hash** to let us know where you are located on the source control. Take this opportunity to check if you're up to date on this branch.
 * **Are you running on a container or virtual machine?** If yes, is it the one provided in the repository or a custom one? Provide as many details as possible, including packets versions, OS and all what comes to your mind.
 
@@ -127,7 +127,7 @@ Here are the specific requirements for suggestions:
 * **Explain the aim of your suggestion.** What should it be used for? What would it bring? Why would it be a good change?
 * **Describe the current behavior and compare it to the one you expect to see.**
 * **Include screenshots or code examples** of what your feature or change would look like. It would be even better to have comparisons bewteen the two.
-* If your feature involves multiple steps for the user, **provide a detailled step-by-step description** of how your feature would be used or how it would process. 
+* If your feature involves multiple steps for the user, **provide a detailed step-by-step description** of how your feature would be used or how it would process. 
 
 #### Inform us
 
@@ -142,7 +142,7 @@ Here are some possible cases that correspond to the "Information" issue type:
 
 Performance problems such as memory leaks or infinite loops should be reported as bugs because they can cause a failure. However, poorly optimized (but working and not subject to failure) functions that could be improved should be reported with the "Information" issue type.
 
-This type of issue is much more flexible as it can be about a wide variety of cases. However, please keep being precise, detailled and constructive in your messages, providing as much information as you can.
+This type of issue is much more flexible as it can be about a wide variety of cases. However, please keep being precise, detailed and constructive in your messages, providing as much information as you can.
 
 #### When I shouldn't open an issue
 
@@ -212,4 +212,4 @@ Any pull request which doesn't comply with these rules will be ignored and close
 Don't hesitate to come talk to the community to share your ideas or concerns on our [Discord](https://discord.gg/pmubSNC).  
 We will be happy to answer your questions or help you setup your workspace to contribute to the project.  
 
-The spoken language is mainly french but english is allowed aswell!
+The spoken language is mainly french but english is allowed as well!

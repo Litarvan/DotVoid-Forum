@@ -2,10 +2,10 @@
 
 ## Description
 
-Make a clear and detailled description of your changes.
+Make a clear and detailed description of your changes.
 
 If your pull request contains visual changes, **include screenshots**. Ideally, include a "before-after" screenshot too.
-If your pull request is functionnal (new helpers or utilities for example), **include some example usages**.
+If your pull request is functionnal (new helpers or utilities for example), **include some usage examples**.
 
 ### Benefits
 
@@ -23,7 +23,7 @@ List all related issues here:
 * #yyy (Issue title)
 * #zzz (Issue title)
 
-If your pull request is not related to any issue, keep this section and write only `None` inside.
+If your pull request is not related to any issue, keep this section and write only `None`.
 
 ## Additional information
 

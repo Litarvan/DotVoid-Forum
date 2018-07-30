@@ -11,7 +11,7 @@ about: Ask for help installing your environment or using a DotVoid-specific feat
 
 Describe what you are trying to achieve.
 
-**Goal:** Describe the goal of what you are trying to achieve, aswell as the context.
+**Goal:** Describe the goal of what you are trying to achieve, as well as the context.
 
 **Relevant code:**
 
