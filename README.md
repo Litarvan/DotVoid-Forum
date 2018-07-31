@@ -4,7 +4,7 @@
 
 DotVoid is a forum on which you can chat mostly about software development, but also about anything IT-related: hardware, news, tech, video games, ...
 
-The forum has the particularity of being a community project coming from what was Bukkit.fr. That means that it's the community that is developing the forum and its related applications (such as Discord bots), and **everyone is invited to [contribute]()**, no matter your skills. Everyone can contribute and do suggestions, whether it be the about the code, the design, the features, etc.
+The forum has the particularity of being a community project coming from what was Bukkit.fr. That means that it's the community that is developing the forum and its related applications (such as Discord bots), and **everyone is invited to [contribute](#contributing)**, no matter your skills. Everyone can contribute and do suggestions, whether it be the about the code, the design, the features, etc.
 
 Developing a forum ourselves allows to involve the community, energize it and bring it closer together. Moreover, it allows to have a unique website which fits exactly what we want.
 
@@ -12,7 +12,7 @@ Developing a forum ourselves allows to involve the community, energize it and br
 
 * Git (of course)
 * PHP >= 7.2
-* MariaDB server >= 8.0
+* MariaDB server >= 10.3
 * Apache 2
 * Composer
 * Supervisor
@@ -53,7 +53,7 @@ Password: vagrant
 
 This account is created by running the seeders.
 
-Username: admin@dotvoid.io
+Username: admin@dotvoid.io  
 Password: admin
 
 ### Manually
@@ -94,14 +94,14 @@ Please read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details on our code o
 
 ## License
 
-This project is licences under the [<INSERT LICENCE HERE>]().
+This project is licenced under the [<INSERT LICENCE HERE>]().
 
 ## Join the discussion on Discord
 
 Don't hesitate to come talk to the community to share your ideas or concerns on our [Discord](https://discord.gg/pmubSNC).  
 We will be happy to answer your questions or help you setup your workspace to contribute to the project.  
 
-The spoken language is mainly french but english is allowed aswell!
+The spoken language is mainly french but english is allowed as well!
 
 ## Useful links
 
