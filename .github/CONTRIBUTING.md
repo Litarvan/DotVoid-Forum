@@ -164,7 +164,12 @@ We're following the [PSR-2](https://github.com/php-fig/fig-standards/blob/master
 
 #### Git
 
-We are using **GitFlow**. You can learn more about it [here](https://datasift.github.io/gitflow/IntroducingGitFlow.html).  
+We are using a variant of **GitFlow**. You can learn more about it [here](https://datasift.github.io/gitflow/IntroducingGitFlow.html).  
+Our approach differs by the fact we are not using release branches as we will not support multiple versions at once. The `develop` branch is the place where everything done in a traditional git flow will be done.  
+
+You can rebase on your personal feature branches. Please make sure you don't break *the golden rule of rebasing*: "Never rebase while you're on a public branch.".  
+Accepted pull requests are **merged** into the `develop` branch. 
+
 
 ##### Commits
 
