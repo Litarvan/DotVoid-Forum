@@ -123,7 +123,7 @@ class RepositoryCommand extends GeneratorCommand
     public function handle()
     {
         $this->type = $this->getNameInput();
-        parent::handle();
+        return parent::handle();
     }
 
     /**
