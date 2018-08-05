@@ -39,11 +39,9 @@ class RepositoryCommand extends GeneratorCommand
     protected function insertAttributes(&$stub, $name)
     {
         $class = $this->getModelClass($name);
-        if($class != null)
-        {
-            $attributes = $this->buildAttributes($class);
-            $stub = str_replace('//[Save attributes]', $attributes, $stub);
-        }
+        $attributes = $this->buildAttributes($class);
+        $stub = str_replace('//[Save attributes]', $attributes, $stub);
+        $stub = str_replace('dummy_id', $class->getKeyName(), $stub);
 
         return $this;
     }
@@ -61,8 +59,6 @@ class RepositoryCommand extends GeneratorCommand
         {
             $attributes .= "        \$model->$attribute = \$inputs['$attribute'];\n";
         }
-
-        $attributes .= "        return \$model->{$class->getKeyName()};";
 
         return $attributes;
     }
@@ -122,6 +118,14 @@ class RepositoryCommand extends GeneratorCommand
      */
     public function handle()
     {
+
+        $model = $this->argument('model');
+        if(!class_exists('App\\'.$model))
+        {
+            $this->error('Class App\\'.$model.' doesn\'t exist!');
+            return false;
+        }
+
         $this->type = $this->getNameInput();
         return parent::handle();
     }
@@ -145,12 +149,6 @@ class RepositoryCommand extends GeneratorCommand
      */
     protected function getModelClass($name)
     {
-        if(!class_exists('App\\'.$name))
-        {
-            $this->error('Class App\\'.$name.' doesn\'t exist!');
-            exit();
-        }
-
         $class = 'App\\'.$name;
         return new $class();
     }

@@ -30,6 +30,8 @@ class DummyModelRepository extends ResourceRepository
     protected function save(Model $model, Array $inputs)
     {
 //[Save attributes]
+        $model->save();
+        return $model->dummy_id;
     }
 
 }
