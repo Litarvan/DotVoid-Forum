@@ -68,4 +68,12 @@ class Thread extends Model
     {
         return $this->pinned_at !== null;
     }
+
+    /**
+     * Gets the thread's tags.
+     */
+    public function tags()
+    {
+        return $this->belongsToMany('App\Models\Tag', 'threads_tags', 'thread_id', 'tag_id');
+    }
 }
