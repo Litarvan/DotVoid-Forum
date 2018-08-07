@@ -59,4 +59,13 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Punishment', 'punisher_id');
     }
+
+    /**
+     * Gets the user's role, which determines its permissions.
+     */
+    public function role()
+    {
+      return $this->belongsTo('App\Models\Role');
+    }
+    // TODO function has_permission(perm_id)
 }
