@@ -92,4 +92,12 @@ class Thread extends Model
     {
         return $this->poll_question !== null;
     }
+
+    /**
+     * Gets all the users who liked the thread.
+     */
+    public function likes()
+    {
+        return $this->belongsToMany('App\Models\User', 'threads_likes', 'thread_id', 'user_id');
+    }
 }
