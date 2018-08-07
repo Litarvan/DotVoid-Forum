@@ -30,7 +30,7 @@ class Blog extends Model
      * Returns true if the blog's creation request has been reviewed.
      * Pending blogs should not be displayed in the forum's blog list.
      */
-    public function is_reviewed()
+    public function isReviewed()
     {
         return $this->status != 'PENDING';
     }
@@ -39,7 +39,7 @@ class Blog extends Model
      * Returns true if the blog's creation has been approved.
      * Returns false if the creation request is pending or rejected.
      */
-    public function is_approved()
+    public function isApproved()
     {
         return $this->status == 'APPROVED';
     }

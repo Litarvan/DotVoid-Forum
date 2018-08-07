@@ -30,7 +30,7 @@ class Category extends Model
      * Gets the basic threads in this category. The threads of the sub-categories
      * aren't included.
      */
-    public function basic_threads()
+    public function basicThreads()
     {
         return $this->hasMany('App\Models\BasicThread', 'category_id');
     }

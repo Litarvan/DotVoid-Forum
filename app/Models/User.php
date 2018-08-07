@@ -47,7 +47,7 @@ class User extends Authenticatable
     /**
      * Gets the punishments received by the user.
      */
-    public function received_punishments()
+    public function receivedPunishments()
     {
         return $this->hasMany('App\Models\Punishment', 'user_id');
     }
@@ -55,7 +55,7 @@ class User extends Authenticatable
     /**
      * Gets the punishments given by the user.
      */
-    public function given_punishments()
+    public function givenPunishments()
     {
         return $this->hasMany('App\Models\Punishment', 'punisher_id');
     }
@@ -72,7 +72,7 @@ class User extends Authenticatable
     /**
      * Gets the basic threads written by the user.
      */
-    public function basic_threads()
+    public function basicThreads()
     {
         return $this->hasMany('App\Models\BasicThread', 'author_id');
     }
@@ -88,7 +88,7 @@ class User extends Authenticatable
     /**
      * Gets the articles reviewed by the user.
      */
-    public function reviewed_articles()
+    public function reviewedArticles()
     {
         return $this->hasMany('App\Models\Article', 'reviewer_id');
     }
@@ -104,7 +104,7 @@ class User extends Authenticatable
     /**
      * Gets the blogs reviewed by the user.
      */
-    public function reviewed_blogs()
+    public function reviewedBlogs()
     {
         return $this->hasMany('App\Models\Blog', 'reviewer_id');
     }
@@ -120,7 +120,7 @@ class User extends Authenticatable
     /**
      * Gets the answers chosen by the user on threads' polls.
      */
-    public function polls_answers()
+    public function pollsAnswers()
     {
         return $this->belongsToMany('App\Models\PollEntry', 'polls_entries', 'user_id', 'entry_id');
     }

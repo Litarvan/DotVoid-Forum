@@ -48,7 +48,7 @@ class Thread extends Model
     /**
      * Returns true iff the thread is currently locked.
      */
-    public function is_locked()
+    public function isLocked()
     {
         return $this->locked_at !== null;
     }
@@ -64,7 +64,7 @@ class Thread extends Model
     /**
      * Returns true iff the thread has been pinned.
      */
-    public function is_pinned()
+    public function isPinned()
     {
         return $this->pinned_at !== null;
     }
@@ -80,7 +80,7 @@ class Thread extends Model
     /**
      * Gets the thread's poll entries, or none if it has no poll.
      */
-    public function poll_entries()
+    public function pollEntries()
     {
         return $this->hasMany('App\Models\PollEntry');
     }
