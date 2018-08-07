@@ -21,7 +21,7 @@ class PollEntry extends Model
     /**
      * Gets all the users that chose this entry as an answer to the poll.
      */
-    public function users_answered()
+    public function usersWhoAnswered()
     {
         return $this->belongsToMany('App\Models\User', 'polls_answers', 'entry_id', 'user_id');
     }
