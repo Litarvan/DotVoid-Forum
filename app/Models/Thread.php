@@ -84,4 +84,12 @@ class Thread extends Model
     {
         return $this->hasMany('App\Models\PollEntry');
     }
+
+    /**
+     * Returns true iff the thread offers a poll.
+     */
+    public function isPoll()
+    {
+        return $this->poll_question !== null;
+    }
 }
