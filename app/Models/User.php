@@ -37,6 +37,14 @@ class User extends Authenticatable
     protected $dates = ['deleted_at'];
 
     /**
+     * Gets the user's current theme.
+     */
+    public function theme()
+    {
+        return $this->hasOne('App\Models\Theme', 'setting_theme_id');
+    }
+
+    /**
      * Gets the punishments received by the user.
      */
     public function received_punishments()
