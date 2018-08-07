@@ -120,9 +120,9 @@ class RepositoryCommand extends GeneratorCommand
     {
 
         $model = $this->argument('model');
-        if(!class_exists('App\\'.$model))
+        if(!class_exists('App\\Models\\'.$model))
         {
-            $this->error('Class App\\'.$model.' doesn\'t exist!');
+            $this->error('Class App\\Models\\'.$model.' doesn\'t exist!');
             return false;
         }
 
@@ -149,7 +149,7 @@ class RepositoryCommand extends GeneratorCommand
      */
     protected function getModelClass($name)
     {
-        $class = 'App\\'.$name;
+        $class = 'App\\Models\\'.$name;
         return new $class();
     }
 
