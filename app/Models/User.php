@@ -124,4 +124,22 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Models\PollEntry', 'polls_entries', 'user_id', 'entry_id');
     }
+
+    /**
+     * Gets the threads liked by the user.
+     */
+    public function likedThreads()
+    {
+        return $this->belongsToMany('App\Models\Thread', 'threads_likes', 'user_id', 'thread_id')
+                    ->withPivot('created_at');
+    }
+
+    /**
+     * Gets the comments liked by the user.
+     */
+    public function likedComments()
+    {
+        return $this->belongsToMany('App\Models\Comment', 'comments_likes', 'user_id', 'comment_id')
+                    ->withPivot('created_at');
+    }
 }

@@ -44,4 +44,12 @@ class Comment extends Model
     {
         return $this->belongsTo('App\Models\Comment', 'parent_id');
     }
+
+    /**
+     * Gets all the users who liked the comment.
+     */
+    public function likes()
+    {
+        return $this->belongsToMany('App\Models\User', 'comments_likes', 'comment_id', 'user_id');
+    }
 }
