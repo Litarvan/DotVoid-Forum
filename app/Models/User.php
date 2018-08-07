@@ -68,4 +68,52 @@ class User extends Authenticatable
       return $this->belongsTo('App\Models\Role');
     }
     // TODO function has_permission(perm_id)
+
+    /**
+     * Gets the basic threads written by the user.
+     */
+    public function basic_threads()
+    {
+        return $this->hasMany('App\Models\BasicThread', 'author_id');
+    }
+
+    /**
+     * Gets the articles the user contributed to.
+     */
+    public function articles()
+    {
+        return $this->belongsToMany('App\Models\Article', 'articles_authors', 'author_id', 'article_id');
+    }
+
+    /**
+     * Gets the articles reviewed by the user.
+     */
+    public function reviewed_articles()
+    {
+        return $this->hasMany('App\Models\Article', 'reviewer_id');
+    }
+
+    /**
+     * Gets the blogs the user contributes to.
+     */
+    public function blogs()
+    {
+        return $this->belongsToMany('App\Models\Blog', 'blogs_contributors', 'contributor_id', 'blog_id');
+    }
+
+    /**
+     * Gets the blogs reviewed by the user.
+     */
+    public function reviewed_blogs()
+    {
+        return $this->hasMany('App\Models\Blog', 'reviewer_id');
+    }
+
+    /**
+     * Gets the comments written by the user.
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment', 'author_id');
+    }
 }
