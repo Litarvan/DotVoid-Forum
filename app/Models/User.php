@@ -35,4 +35,20 @@ class User extends Authenticatable
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    /**
+     * Gets the punishments received by the user.
+     */
+    public function received_punishments()
+    {
+        return $this->hasMany('App\Models\Punishment', 'user_id');
+    }
+
+    /**
+     * Gets the punishments given by the user.
+     */
+    public function given_punishments()
+    {
+        return $this->hasMany('App\Models\Punishment', 'punisher_id');
+    }
 }
