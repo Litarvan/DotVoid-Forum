@@ -76,4 +76,12 @@ class Thread extends Model
     {
         return $this->belongsToMany('App\Models\Tag', 'threads_tags', 'thread_id', 'tag_id');
     }
+
+    /**
+     * Gets the thread's poll entries, or none if it has no poll.
+     */
+    public function poll_entries()
+    {
+        return $this->hasMany('App\Models\PollEntry');
+    }
 }

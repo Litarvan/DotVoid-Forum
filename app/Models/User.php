@@ -116,4 +116,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Comment', 'author_id');
     }
+
+    /**
+     * Gets the answers chosen by the user on threads' polls.
+     */
+    public function polls_answers()
+    {
+        return $this->belongsToMany('App\Models\PollEntry', 'polls_entries', 'user_id', 'entry_id');
+    }
 }
