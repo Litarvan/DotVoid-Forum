@@ -4,6 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Model for permissions.
+ *
+ * @property int id
+ * @property string description
+ */
 class Permission extends Model
 {
     public $timestamps = false;

@@ -5,10 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/** Model for blogs which contains articles */
+/**
+ * Model for blogs which contains articles
+ *
+ * @property timestamp created_at
+ * @property timestamp deleted_at
+ * @property int id
+ * @property string name
+ * @property string description
+ * @property string logo_url
+ * @property enum status PENDING, APPROVED, REJECTED
+ * @property timestamp reviewed_at
+ * @property int reviewer_id
+ * @property string review_message
+ */
 class Blog extends Model
 {
     use SoftDeletes;
+
+    const UPDATED_AT = null;
 
     /**
      * Gets the blog's articles.

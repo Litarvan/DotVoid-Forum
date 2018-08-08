@@ -4,7 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-/** Model for basic threads which belong to categories and have one author */
+/**
+ * Model for basic threads which belong to categories and have one author.
+ *
+ * @property int id
+ * @property boolean is_question
+ * @property int category_id
+ * @property int author_id
+ */
 class BasicThread extends Model
 {
     // The timestamps are managed by the Thread model

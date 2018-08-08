@@ -9,6 +9,22 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Model for information common to basic threads and blog articles. Both
  * the basic threads and the blog articles *are threads*, since they have
  * a title, a main content, several comments and can be locked and pinned.
+ *
+ * @property timestamp created_at
+ * @property timestamp updated_at
+ * @property timestamp deleted_at
+ * @property int id
+ * @property string title
+ * @property string content Mardown content
+ * @property boolean is_draft true if unpublished draft
+ * @property boolean is_article true if article, false if basic thread
+ * @property timestamp locked_at null if not locked
+ * @property int locker_id
+ * @property string lock_message
+ * @property timestamp pinned_at null if not pinned
+ * @property int pinner_id
+ * @property string poll_question null if there's no poll
+ * @property boolean is_poll_multiple_choice true if the user can choose multiple answers
  */
 class Thread extends Model
 {

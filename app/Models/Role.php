@@ -4,10 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Model for user roles, which determines them their permissions.
+ *
+ * @property int id
+ * @property string name
+ */
 class Role extends Model
 {
     public $timestamps = false;
-    
+
     /**
      * Gets the users with this role.
      */
