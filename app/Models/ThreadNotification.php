@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @property timestamp created_at
  * @property timestamp deleted_at
+ * @property int id
  * @property int user_id
  * @property int thread_id
  * @property enum type NEW, LIKE, COMMENT, APPROVAL, REJECT, LOCK, PIN, DELETION, MENTION

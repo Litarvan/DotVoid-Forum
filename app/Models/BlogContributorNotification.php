@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Model for notifications addressed to blogs contributors.
  *
- * @property timestamlp created_at
+ * @property timestamp created_at
  * @property timestamp deleted_at
+ * @property int id
  * @property int blog_id
  * @property int user_id
  * @property int other_user_id
