@@ -51,4 +51,12 @@ class Blog extends Model
     {
         return $this->belongsTo('App\Models\User', 'reviewer_id');
     }
+
+    /**
+     * Gets the users who subscribed to receive notifications about new articles.
+     */
+    public function subscribers()
+    {
+        return $this->belongsToMany('App\Models\User', 'blogs_subscriptions', 'blog_id', 'user_id');
+    }
 }

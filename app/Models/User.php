@@ -142,4 +142,55 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Models\Comment', 'comments_likes', 'user_id', 'comment_id')
                     ->withPivot('created_at');
     }
+
+    /**
+     * Gets the categories the user subscribed to.
+     */
+    public function subscribedCategories()
+    {
+        return $this->belongsToMany('App\Models\Category', 'categories_subscriptions', 'user_id', 'category_id');
+    }
+
+    /**
+     * Gets the threads the user subscribed to.
+     */
+    public function subscribedThreads()
+    {
+        return $this->belongsToMany('App\Models\Thread', 'threads_subscriptions', 'user_id', 'thread_id');
+    }
+
+    /**
+     * Gets the blogs the user subscribed to.
+     */
+    public function subscribedBlogs()
+    {
+        return $this->belongsToMany('App\Models\Blog', 'blogs_subscriptions', 'user_id', 'blog_id');
+    }
+
+    /**
+     * Gets the threads notifications received by the user.
+     * Read notifications are soft deleted.
+     */
+    public function notifiedThreads()
+    {
+        return $this->hasMany('App\Models\ThreadNotification', 'user_id');
+    }
+
+    /**
+     * Gets the comments notifications received by the user.
+     * Read notifications are soft deleted.
+     */
+    public function notifiedComments()
+    {
+        return $this->hasMany('App\Models\CommentNotification', 'user_id');
+    }
+
+    /**
+     * Gets the blog contributions notifications received by the user.
+     * Read notifications are soft deleted.
+     */
+    public function notifiedBlogContributions()
+    {
+        return $this->hasMany('App\Models\BlogContributorNotification', 'user_id');
+    }
 }
