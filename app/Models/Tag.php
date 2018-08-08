@@ -4,7 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-/** Model for tags which are applied to threads (basic and articles). */
+/**
+ * Model for tags which are applied to threads (basic and articles).
+ *
+ * @property int id
+ * @property string name
+ * @property string color_code HTML color code
+ */
 class Tag extends Model
 {
     public $timestamps = false;

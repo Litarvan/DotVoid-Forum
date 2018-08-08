@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * A comment under a thread. It may be an answer to another comment,
  * in which case it has a parent() and this parent has subs().
+ *
+ * @property timestamp created_at
+ * @property timestamp updated_at
+ * @property timestamp deleted_at
+ * @property int id
+ * @property string content Markdown content
+ * @property int thread_id
+ * @property int author_id
+ * @property int parent_id
+ * @property boolean is_pinned
  */
 class Comment extends Model
 {

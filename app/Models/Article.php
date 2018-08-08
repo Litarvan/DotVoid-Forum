@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
  * Model for articles threads which make up blogs and can have more
  * than one author (because all the contributors of the blog can edit
  * the blog's articles before and after they're published)
+ *
+ * @property int id
+ * @property enum status PENDING, APPROVED, REJECTED
+ * @property timestamp reviewed_at
+ * @property int reviewer_id
+ * @property string review_message
+ * @property int blog_id
  */
 class Article extends Model
 {

@@ -5,7 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/** Model for notifications related to comments. */
+/**
+ * Model for notifications related to comments.
+ *
+ * @property timestamp created_at
+ * @property timestamp deleted_at
+ * @property int user_id
+ * @property int comment_id
+ * @property enum type LIKE, RESPONSE, PIN, DELETION, MENTION
+ */
 class CommentNotification extends Model
 {
     // The notification is soft-deleted when it's read by the user

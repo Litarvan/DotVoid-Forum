@@ -4,7 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-/** Model for polls entries, ie available answers to a thread's poll */
+/**
+ * Model for polls entries, which define the available answers to a thread's poll.
+ *
+ * @property int id
+ * @property int thread_id
+ * @property string text
+ */
 class PollEntry extends Model
 {
     public $timestamps = false;

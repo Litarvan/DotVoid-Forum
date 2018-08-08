@@ -6,6 +6,28 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * Model for the forum users.
+ *
+ * @property timestamp created_at
+ * @property timestamp updated_at
+ * @property date deleted_at
+ * @property int id
+ * @property string pseudo
+ * @property string email
+ * @property string avatar_url
+ * @property string github_url
+ * @property string website_url
+ * @property string profile_description
+ * @property int role_id ref to role()
+ * @property string validation_token
+ * @property timestamp validation_expires_at
+ * @property string password (hashed of course)
+ * @property string remember_token
+ * @property boolean setting_subscribe_comments true to get notifications for comment answers
+ * @property boolean setting_subscribe_likes true to get notifications for received likes
+ * @property int setting_theme_id ref to theme()
+ */
 class User extends Authenticatable
 {
     use Notifiable;

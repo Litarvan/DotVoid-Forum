@@ -5,7 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/** Model for notifications addressed to blogs contributors. */
+/**
+ * Model for notifications addressed to blogs contributors.
+ *
+ * @property timestamlp created_at
+ * @property timestamp deleted_at
+ * @property int blog_id
+ * @property int user_id
+ * @property int other_user_id
+ * @property enum type APPROVAL, REJECT, CONTRIBUTOR, NOT_CONTRIBUTOR, NEW_COLLEAGUE, BYE_COLLEAGUE
+ */
 class BlogContributorNotification extends Model
 {
     // The notification is soft-deleted when it's read by the user

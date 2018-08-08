@@ -5,7 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/** Model for notifications related to threads (basic or articles). */
+/**
+ * Model for notifications related to threads (basic or articles).
+ *
+ * @property timestamp created_at
+ * @property timestamp deleted_at
+ * @property int user_id
+ * @property int thread_id
+ * @property enum type NEW, LIKE, COMMENT, APPROVAL, REJECT, LOCK, PIN, DELETION, MENTION
+ */
 class ThreadNotification extends Model
 {
     // The notification is soft-deleted when it's read by the user

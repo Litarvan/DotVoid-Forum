@@ -5,7 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/** Model for categories which contains basic threads and sub-categories. */
+/**
+ * Model for categories which contains basic threads and sub-categories.
+ *
+ * @property timestamp deleted_at
+ * @property int id
+ * @property int parent_id (nullable)
+ * @property string name
+ * @property string description
+ * @property string fa_icon FontAwesome icon code
+ */
 class Category extends Model
 {
     use SoftDeletes;

@@ -4,6 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Model for the front-end themes which the users can choose.
+ *
+ * @property int id
+ * @property string name
+ * @property string css_url URL to the css file
+ */
 class Theme extends Model
 {
     /**
