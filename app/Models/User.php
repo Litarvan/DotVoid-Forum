@@ -47,7 +47,7 @@ class User extends Authenticatable
     /**
      * Gets the punishments received by the user.
      */
-    public function receivedPunishments()
+    public function punishmentsReceived()
     {
         return $this->hasMany('App\Models\Punishment', 'user_id');
     }
@@ -55,7 +55,7 @@ class User extends Authenticatable
     /**
      * Gets the punishments given by the user.
      */
-    public function givenPunishments()
+    public function punishmentsGiven()
     {
         return $this->hasMany('App\Models\Punishment', 'punisher_id');
     }
