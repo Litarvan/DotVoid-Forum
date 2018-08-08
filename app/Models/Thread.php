@@ -100,4 +100,12 @@ class Thread extends Model
     {
         return $this->belongsToMany('App\Models\User', 'threads_likes', 'thread_id', 'user_id');
     }
+
+    /**
+     * Gets the users who subscribed to the thread to receive notifications.
+     */
+    public function subscribers()
+    {
+        return $this->belongsToMany('App\Models\User', 'threads_subscriptions', 'thread_id', 'user_id');
+    }
 }

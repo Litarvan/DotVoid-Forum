@@ -34,4 +34,12 @@ class Category extends Model
     {
         return $this->hasMany('App\Models\BasicThread', 'category_id');
     }
+
+    /**
+     * Gets the users who subscribed to receive notifications about new threads.
+     */
+    public function subscribers()
+    {
+        return $this->belongsToMany('App\Models\User', 'categories_subscriptions', 'category_id', 'user_id');
+    }
 }
