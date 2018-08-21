@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+ * When not from Ajax request, accept any path to the main view (Vue.JS view)
+ */
+
+if (!request()->ajax()) {
+    Route::get('/{vue?}', function () {
+        return view('main');
+    })->where('vue', '[\/\w\.-]*');
+}

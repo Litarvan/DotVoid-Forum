@@ -16,7 +16,7 @@ Developing a forum ourselves allows to involve the community, energize it and br
 * Apache 2
 * Composer
 * Supervisor
-* npm
+* Node.JS
 * [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/) (Optional but recommended)
 
 **Recommended OS:** Ubuntu 18.04 LTS
@@ -64,11 +64,13 @@ Password: admin
 4. Create a database with the `utf-8` charset.
 5. Open a terminal and `cd` to the project's root directory.
 6. Make sure the `www-data` user has write access to the `storage` and `bootstrap` directories.
-7. Run `composer install`.
-8. Run `npm install`.
-9. Copy `env.example` and change its content to match your local configuration.
-10. Run the following commands (replacing the path with your path):
+7. Copy `env.example` and change its content to match your local configuration.
+8. Run the following commands (replacing the path with your path):
 ```
+composer install
+npm install
+npm run prod
+
 php artisan key:generate
 
 php artisan migrate:install
