@@ -1,8 +1,100 @@
+// App front-end variables.
+// Made from the DotVoid graphical chart.
 
-// Body
-$body-bg: #f5f8fa;
+// Main colors
 
-// Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$colors-core: (
+        primary: #ff3f34,
+        secondary: #45339e,
+        tertiary: #3230bf,
+        alert: (
+                success: #62ce33,
+                primary: #2f3640,
+                info: #63a2ed,
+                warning: #ebc92b,
+                danger: #ff3f34,
+                muted: #9f9f9f
+        )
+);
+
+// Light theme
+
+$colors-light: map-merge($colors-core, (
+        titles: (#333333, #000000, #2f3640),
+        text: #2f3640
+));
+
+// Dark theme
+
+$colors-dark: map-merge($colors-core, (
+      // TODO: Dark theme colors
+));
+
+// Helpers
+//
+// Return the value of "$key" from the map "$map" (default: core colors).
+// If $child is filled, will get the "$child" key value of the result, interpreted as a map
+//
+// Examples :
+//     border: solid 5px get_color(primary); // Returns $colors-core -> primary
+//     color: get_color(text, $colors-dark); // Returns $colors-dark -> text
+//     background-color: get_color(alert, $colors-light, primary);  // Returns $colors-light -> alert -> primary
+@function get_color($key, $map: $colors-core, $child: false) {
+  $result: map_get($map, $key);
+
+  @if $child == false {
+    @return $result;
+  }
+
+  @return map_get($result, $child)
+}
+
+// Return the value of "$key" from the light colors map.
+// If $child is filled, will get the "$child" key value of the result, interpreted as a map
+//
+// Examples :
+//     color: get_color_light(text); // Returns $colors-light -> primary
+//     background-color: get_color_light(alert, primary);  // Returns $colors-light -> alert -> primary
+@function get_color_light($key, $child: false) {
+  @return get_color($key, $colors-light, $child);
+}
+
+// Return the value of "$key" from the dark colors map.
+// If $child is filled, will get the "$child" key value of the result, interpreted as a map
+//
+// Examples :
+//     color: get_color_dark(text); // Returns $colors-dark -> primary
+//     background-color: get_color_dark(alert, primary);  // Returns $colors-dark -> alert -> primary
+@function get_color_dark($key, $child: false) {
+  @return get_color($key, $colors-dark, $child);
+}
+
+// Set "$property" value as a colors map "$key" value, depending on the current theme.
+// If $child is filled, will get the "$child" key value of the result, interpreted as a map
+//
+// Example :
+//     input[type=text] {
+//         @include themed(color, text);
+//         margin-top: 20px;
+//     }
+// Will compile as :
+//     input[type=text] {
+//         margin-top: 20px;
+//     }
+//
+//     input[type=text].light {
+//         color: #2f3640;  // $colors-light -> text
+//     }
+//
+//     input[type=text].dark {
+//         color: <something>;  // $colors-dark -> text (TODO: Fill)
+//     }
+@mixin themed($property, $key, $child: false) {
+  &.light {
+    #{$property}: get_color_light($key, $child);
+  }
+
+  &.dark {
+    #{$property}: get_color_dark($key, $child);
+  }
+}
