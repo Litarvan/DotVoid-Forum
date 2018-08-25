@@ -24,6 +24,13 @@ class ThreadNotification extends Model
     protected $table = 'threads_notifications';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['user_id', 'thread_id', 'type'];
+
+    /**
      * Gets the user that received the notification.
      */
     public function user()

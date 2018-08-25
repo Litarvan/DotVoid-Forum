@@ -20,6 +20,14 @@ class BasicThread extends Model
     protected $table = 'normal_threads';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['is_question', 'category_id', 'author_id'];
+
+
+    /**
      * Gets the common thread information for this basic thread.
      */
     public function thread()

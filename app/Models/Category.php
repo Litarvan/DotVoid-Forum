@@ -20,6 +20,13 @@ class Category extends Model
     use SoftDeletes;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['parent_id', 'name', 'description', 'fa_icon'];
+
+    /**
      * Gets the sub-categories, maybe none.
      */
     public function subs()

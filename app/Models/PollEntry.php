@@ -17,6 +17,13 @@ class PollEntry extends Model
     protected $table = 'polls_entries';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['thread_id', 'text'];
+
+    /**
      * Gets the thread that offers the poll that contains this entry.
      */
     public function thread()

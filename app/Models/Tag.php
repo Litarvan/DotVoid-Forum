@@ -16,6 +16,13 @@ class Tag extends Model
     public $timestamps = false;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name', 'color_code'];
+
+    /**
      * Gets the threads that are tagged with this tag.
      */
     public function threads()

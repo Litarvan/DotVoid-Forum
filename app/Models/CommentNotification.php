@@ -24,6 +24,13 @@ class CommentNotification extends Model
     protected $table = 'comments_notifications';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['user_id', 'comment_id', 'type'];
+
+    /**
      * Gets the user that received the notification.
      */
     public function user()

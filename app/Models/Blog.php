@@ -26,6 +26,16 @@ class Blog extends Model
     const UPDATED_AT = null;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'description', 'logo_url', 'status', 'reviewed_at',
+        'reviewer_id', 'review_message'
+    ];
+
+    /**
      * Gets the blog's articles.
      */
     public function articles()

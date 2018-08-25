@@ -24,6 +24,13 @@ class Comment extends Model
     use SoftDeletes;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['content', 'thread_id', 'author_id', 'parent_id', 'is_pinned'];
+
+    /**
      * Gets the thread (basic thread or article) that owns the comment.
      */
     public function thread()

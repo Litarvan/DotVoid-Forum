@@ -25,6 +25,13 @@ class BlogContributorNotification extends Model
     protected $table = 'blogs_contributors_notifications';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['blog_id', 'user_id', 'other_user_id', 'type'];
+
+    /**
      * Gets the user that received the notification.
      */
     public function user()

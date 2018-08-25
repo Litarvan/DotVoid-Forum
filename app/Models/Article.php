@@ -22,6 +22,13 @@ class Article extends Model
     public $timestamps = false;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['status', 'reviewed_at', 'reviewer_id', 'review_message', 'blog_id'];
+
+    /**
      * Gets the common thread information for this article.
      */
     public function thread()

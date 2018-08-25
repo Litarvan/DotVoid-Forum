@@ -23,6 +23,13 @@ class Punishment extends Model
     use SoftDeletes;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['ends_at', 'user_id', 'punisher_id', 'reason', 'type'];
+
+    /**
      * Gets the punished user.
      */
     public function user()

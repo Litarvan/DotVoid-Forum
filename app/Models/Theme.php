@@ -14,6 +14,13 @@ use Illuminate\Database\Eloquent\Model;
 class Theme extends Model
 {
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name', 'css_url'];
+
+    /**
      * Gets the users who use this theme.
      */
     public function users()

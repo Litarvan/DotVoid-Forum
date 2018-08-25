@@ -31,6 +31,17 @@ class Thread extends Model
     use SoftDeletes;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title', 'content', 'is_draft', 'is_article', 'locked_at', 'locker_id',
+        'lock_message', 'pinned_at', 'pinner_id', 'poll_question',
+        'is_poll_multiple_choice'
+    ];
+
+    /**
      * Gets the basic thread information, or null if it's an article.
      */
     public function basic()
