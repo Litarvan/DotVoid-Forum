@@ -29,6 +29,10 @@ class CategoryRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->parent_id = $inputs['parent_id'];
+        $model->name = $inputs['name'];
+        $model->description = $inputs['description'];
+        $model->fa_icon = $inputs['fa_icon'];
 
         $model->save();
         return $model->id;

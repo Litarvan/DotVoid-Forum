@@ -29,6 +29,8 @@ class TagRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->name = $inputs['name'];
+        $model->color_code = $inputs['color_code'];
 
         $model->save();
         return $model->id;

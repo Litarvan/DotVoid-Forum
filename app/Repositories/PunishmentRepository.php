@@ -29,6 +29,11 @@ class PunishmentRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->ends_at = $inputs['ends_at'];
+        $model->user_id = $inputs['user_id'];
+        $model->punisher_id = $inputs['punisher_id'];
+        $model->reason = $inputs['reason'];
+        $model->type = $inputs['type'];
 
         $model->save();
         return $model->id;

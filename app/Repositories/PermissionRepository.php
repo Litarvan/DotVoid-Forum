@@ -29,6 +29,7 @@ class PermissionRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->description = $inputs['description'];
 
         $model->save();
         return $model->id;

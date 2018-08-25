@@ -29,6 +29,11 @@ class ArticleRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->status = $inputs['status'];
+        $model->reviewed_at = $inputs['reviewed_at'];
+        $model->reviewer_id = $inputs['reviewer_id'];
+        $model->review_message = $inputs['review_message'];
+        $model->blog_id = $inputs['blog_id'];
 
         $model->save();
         return $model->id;

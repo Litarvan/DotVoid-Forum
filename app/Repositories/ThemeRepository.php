@@ -29,6 +29,8 @@ class ThemeRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->name = $inputs['name'];
+        $model->css_url = $inputs['css_url'];
 
         $model->save();
         return $model->id;

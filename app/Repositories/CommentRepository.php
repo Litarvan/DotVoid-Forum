@@ -29,6 +29,11 @@ class CommentRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->content = $inputs['content'];
+        $model->thread_id = $inputs['thread_id'];
+        $model->author_id = $inputs['author_id'];
+        $model->parent_id = $inputs['parent_id'];
+        $model->is_pinned = $inputs['is_pinned'];
 
         $model->save();
         return $model->id;

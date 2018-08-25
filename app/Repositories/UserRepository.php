@@ -31,7 +31,15 @@ class UserRepository extends ResourceRepository
     {
         $model->pseudo = $inputs['pseudo'];
         $model->email = $inputs['email'];
+        $model->avatar_url = $inputs['avatar_url'];
+        $model->github_url = $inputs['github_url'];
+        $model->website_url = $inputs['website_url'];
+        $model->profile_description = $inputs['profile_description'];
+        $model->role_id = $inputs['role_id'];
         $model->password = $inputs['password'];
+        $model->setting_subscribe_comments = $inputs['setting_subscribe_comments'];
+        $model->setting_subscribe_likes = $inputs['setting_subscribe_likes'];
+        $model->setting_theme_id = $inputs['setting_theme_id'];
 
         $model->save();
         return $model->id;

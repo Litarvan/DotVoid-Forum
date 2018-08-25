@@ -29,6 +29,17 @@ class ThreadRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->title = $inputs['title'];
+        $model->content = $inputs['content'];
+        $model->is_draft = $inputs['is_draft'];
+        $model->is_article = $inputs['is_article'];
+        $model->locked_at = $inputs['locked_at'];
+        $model->locker_id = $inputs['locker_id'];
+        $model->lock_message = $inputs['lock_message'];
+        $model->pinned_at = $inputs['pinned_at'];
+        $model->pinner_id = $inputs['pinner_id'];
+        $model->poll_question = $inputs['poll_question'];
+        $model->is_poll_multiple_choice = $inputs['is_poll_multiple_choice'];
 
         $model->save();
         return $model->id;

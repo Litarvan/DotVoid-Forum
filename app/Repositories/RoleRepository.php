@@ -29,6 +29,7 @@ class RoleRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->name = $inputs['name'];
 
         $model->save();
         return $model->id;

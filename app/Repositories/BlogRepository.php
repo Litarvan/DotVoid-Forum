@@ -29,6 +29,13 @@ class BlogRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
+        $model->name = $inputs['name'];
+        $model->description = $inputs['description'];
+        $model->logo_url = $inputs['logo_url'];
+        $model->status = $inputs['status'];
+        $model->reviewed_at = $inputs['reviewed_at'];
+        $model->reviewer_id = $inputs['reviewer_id'];
+        $model->review_message = $inputs['review_message'];
 
         $model->save();
         return $model->id;
