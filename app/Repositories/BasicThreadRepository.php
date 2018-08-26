@@ -29,7 +29,7 @@ class BasicThreadRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
-        $model->is_question = $inputs['is_question'];
+        $model->is_question = isset($inputs['is_question']);
         $model->category_id = $inputs['category_id'];
         $model->author_id = $inputs['author_id'];
 

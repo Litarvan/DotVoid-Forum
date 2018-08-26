@@ -33,7 +33,7 @@ class CommentRepository extends ResourceRepository
         $model->thread_id = $inputs['thread_id'];
         $model->author_id = $inputs['author_id'];
         $model->parent_id = $inputs['parent_id'];
-        $model->is_pinned = $inputs['is_pinned'];
+        $model->is_pinned = isset($inputs['is_pinned']);
 
         $model->save();
         return $model->id;

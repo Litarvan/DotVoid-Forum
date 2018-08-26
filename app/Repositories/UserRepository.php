@@ -37,8 +37,8 @@ class UserRepository extends ResourceRepository
         $model->profile_description = $inputs['profile_description'];
         $model->role_id = $inputs['role_id'];
         $model->password = $inputs['password'];
-        $model->setting_subscribe_comments = $inputs['setting_subscribe_comments'];
-        $model->setting_subscribe_likes = $inputs['setting_subscribe_likes'];
+        $model->setting_subscribe_comments = isset($inputs['setting_subscribe_comments']);
+        $model->setting_subscribe_likes = isset($inputs['setting_subscribe_likes']);
         $model->setting_theme_id = $inputs['setting_theme_id'];
 
         $model->save();
