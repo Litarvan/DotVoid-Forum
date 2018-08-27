@@ -36,9 +36,8 @@ class Thread extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'content', 'is_draft', 'is_article', 'locked_at', 'locker_id',
-        'lock_message', 'pinned_at', 'pinner_id', 'poll_question',
-        'is_poll_multiple_choice'
+        'title', 'content', 'is_draft', 'is_article',
+        'poll_question', 'is_poll_multiple_choice'
     ];
 
     /**

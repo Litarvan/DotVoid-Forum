@@ -26,7 +26,7 @@ class Article extends Model
      *
      * @var array
      */
-    protected $fillable = ['status', 'reviewed_at', 'reviewer_id', 'review_message', 'blog_id'];
+    protected $fillable = ['status', 'blog_id'];
 
     /**
      * Gets the common thread information for this article.

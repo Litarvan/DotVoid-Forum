@@ -28,7 +28,7 @@ class Comment extends Model
      *
      * @var array
      */
-    protected $fillable = ['content', 'thread_id', 'author_id', 'parent_id', 'is_pinned'];
+    protected $fillable = ['content', 'thread_id', 'author_id', 'parent_id'];
 
     /**
      * Gets the thread (basic thread or article) that owns the comment.

@@ -30,10 +30,7 @@ class Blog extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'description', 'logo_url', 'status', 'reviewed_at',
-        'reviewer_id', 'review_message'
-    ];
+    protected $fillable = ['name', 'description', 'logo_url', 'status'];
 
     /**
      * Gets the blog's articles.
