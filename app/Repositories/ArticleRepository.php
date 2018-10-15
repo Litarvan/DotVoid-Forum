@@ -1,21 +1,21 @@
 <?php
 
-namespace DummyNamespace;
+namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Repositories\ResourceRepository;
-use App\Models\DummyModel;
+use App\Models\Article;
 
-class DummyModelRepository extends ResourceRepository
+class ArticleRepository extends ResourceRepository
 {
 
     /**
      * Create a new repository instance.
      *
-     * @param  \App\Models\DummyModel  $model
+     * @param  \App\Models\Article  $model
      * @return void
      */
-    public function __construct(DummyModel $model)
+    public function __construct(Article $model)
     {
         $this->model = $model;
     }
@@ -29,9 +29,11 @@ class DummyModelRepository extends ResourceRepository
      */
     protected function save(Model $model, Array $inputs)
     {
-//[Save attributes]
+        $model->status = $inputs['status'];
+        $model->blog_id = $inputs['blog_id'];
+
         $model->save();
-        return $model->dummy_id;
+        return $model->id;
     }
 
 }
